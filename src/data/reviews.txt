@@ -1,0 +1,30 @@
+# HOW TO ADD A REVIEW
+# --------------------
+# Each review is ONE line, with 4 parts separated by the | character:
+#
+#   Name | Star Rating (1-5) | Review Text | Date
+#
+# Example:
+#   Jane Smith | 5 | Great crew, fixed our clarifier drive fast and did it right. | 2 months ago
+#
+# - Don't remove the | symbols, they're what separates each part.
+# - Lines starting with # (like these instructions) are ignored - the website skips them.
+# - Add as many review lines as you want, one per line.
+# - To remove a review, just delete its line.
+# - Blank lines are fine, they're ignored too.
+
+Paul Hitchcock | 5 | Copperstate was timely, quick, and professional from start to finish on our job in Stuart, FL. Honestly, there's nothing I'd ask them to do differently. Communication, cleanliness, and scheduling were all great. I really enjoyed working with this team and would recommend them to anyone in the industry. Easy 10/10. | July 21, 2026
+
+Matt Zingler | 5 | The crew was quick, efficient, and got everything done right the first time. Quality control was great, and they never sacrificed quality for speed. I can't think of anything they could have done better on our job at the Lucky Friday Mine. | March 31, 2026
+
+Patrick Padilla | 5 | Professional, great communication, and quick response time. The crew did an amazing job, and Ash and Donnie were easy to work with. Would highly recommend. | April 28, 2026
+
+Troy Peek | 5 | We've used Copperstate multiple times in Shelbyville, TN and have never been disappointed. They've been great every time. Communication, speed, technical quality, pricing, and professionalism. Their follow-up is always great and they're a pleasure to work with. They leave the job site clean, and their scheduling is excellent. We'd definitely recommend them. | July 20, 2026
+
+Wes | 5 | Every single time Copperstate comes out to our site in Ocoee, FL, it's a 10/10 experience. No one works harder than Copperstate. Everyone on the whole team is a 10/10. They're the very best in the industry. | June 29, 2026
+
+Carlos Anaya | 5 | Copperstate has been great to work with. Every time is an exceptional experience. I want to highlight their communication, and I also love the safety standards of everyone who works at Copperstate. Job was at Jacobs, Tucson. | March 27, 2026
+
+Zach | 5 | The whole team went above and beyond on our job in Haines City, FL. Amazing communication with quick response times and timely service. Copperstate makes your problems their problems and they're committed to resolving them. | June 22, 2026
+
+Carlos Anaya | 5 | Copperstate Machine has performed several jobs for my WRF spanning several processes. They offer turnkey solutions with options to fit budget and production needs. The whole team, from owners to technicians, is always very responsive, professional, and takes great pride in the work they do. From inspection, design, fabrication, installation, and start up, I can count on them to help me keep my facility running. |
