@@ -16,7 +16,7 @@ const CAREERS_SUBMENU = [
 
 function navLinkClass({ isActive }) {
   return `text-[13px] tracking-[0.12em] uppercase transition-colors ${
-    isActive ? 'text-copper-light' : 'text-graphite hover:text-cream'
+    isActive ? 'text-copper-dark' : 'text-slate hover:text-ink'
   }`;
 }
 
@@ -39,7 +39,7 @@ function NavDropdown({ label, basePath, items }) {
       <Link
         to={basePath}
         className={`flex items-center gap-1.5 text-[13px] tracking-[0.12em] uppercase transition-colors ${
-          isActive ? 'text-copper-light' : 'text-graphite hover:text-cream'
+          isActive ? 'text-copper-dark' : 'text-slate hover:text-ink'
         }`}
         onClick={() => setOpen(false)}
       >
@@ -51,13 +51,13 @@ function NavDropdown({ label, basePath, items }) {
 
       {open && (
         <div className="absolute top-full left-0 pt-3 min-w-[220px] max-h-[70vh]">
-          <div className="bg-ink-soft border border-ink-line shadow-lg max-h-[60vh] overflow-y-auto">
+          <div className="bg-cream border border-ink-line/15 shadow-lg max-h-[60vh] overflow-y-auto">
             {items.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-[12.5px] tracking-[0.06em] uppercase text-graphite hover:text-cream hover:bg-ink transition-colors"
+                className="block px-4 py-3 text-[12.5px] tracking-[0.06em] uppercase text-slate hover:text-ink hover:bg-ink/5 transition-colors"
               >
                 {item.label}
               </Link>
@@ -78,14 +78,14 @@ function MobileDropdown({ label, basePath, items, onNavigate }) {
         <Link
           to={basePath}
           onClick={onNavigate}
-          className="text-[13px] tracking-[0.12em] uppercase text-graphite hover:text-cream"
+          className="text-[13px] tracking-[0.12em] uppercase text-slate hover:text-ink"
         >
           {label}
         </Link>
         <button
           aria-label={`Toggle ${label} submenu`}
           onClick={() => setOpen((v) => !v)}
-          className="text-graphite p-1"
+          className="text-slate p-1"
         >
           <svg
             width="14"
@@ -107,7 +107,7 @@ function MobileDropdown({ label, basePath, items, onNavigate }) {
               key={item.to}
               to={item.to}
               onClick={onNavigate}
-              className="text-[12.5px] tracking-[0.06em] uppercase text-graphite hover:text-cream"
+              className="text-[12.5px] tracking-[0.06em] uppercase text-slate hover:text-ink"
             >
               {item.label}
             </Link>
@@ -122,10 +122,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ink border-b border-ink-line">
+    <header className="sticky top-0 z-50 bg-cream border-b border-ink-line/15">
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-[72px] flex items-center justify-between">
         <Link to="/" className="flex items-center shrink-0">
-          <img src={logo} alt="Copperstate Machine & Industrial Service" className="h-9 md:h-10 w-auto" />
+          <img src={logo} alt="Copperstate Machine & Industrial Service" className="h-14 md:h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-9">
@@ -147,7 +147,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden text-cream p-2 -mr-2"
+          className="md:hidden text-ink p-2 -mr-2"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -163,7 +163,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-ink-line bg-ink px-5 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-ink-line/15 bg-cream px-5 py-4 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
