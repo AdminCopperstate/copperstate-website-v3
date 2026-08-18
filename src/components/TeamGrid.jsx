@@ -6,13 +6,13 @@ function TeamPhoto({ src, name }) {
   const [broken, setBroken] = useState(false);
 
   return (
-    <div className="relative aspect-square overflow-hidden bg-ink-line/10">
+    <div className="relative aspect-[4/5] overflow-hidden bg-ink-line/10">
       {!broken && (
         <img
           src={src}
           alt={name}
           onError={() => setBroken(true)}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
       )}
       {broken && (

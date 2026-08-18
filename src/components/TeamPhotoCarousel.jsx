@@ -27,13 +27,13 @@ export default function TeamPhotoCarousel() {
     <div>
       <h2 className="font-display text-cream text-2xl mb-5">Copperstate Machine and Industrial</h2>
 
-      <div className="relative aspect-[16/7] bg-ink-soft border border-ink-line overflow-hidden">
+      <div className="relative aspect-[16/9] bg-ink-soft border border-ink-line overflow-hidden">
         {!isBroken && (
           <img
             src={photo.src}
             alt={photo.caption}
             onError={() => setBroken((b) => ({ ...b, [index]: true }))}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         )}
         {isBroken && (
