@@ -166,14 +166,14 @@ export default function PartnersPage() {
             </span>
           </div>
           <h2 className="text-ink text-4xl md:text-5xl leading-[1.02]">
-            The Technicians, Not A Call Center
+            Industrial Mechanics That Make Your Problems Our Problems.
           </h2>
           <p className="mt-5 text-slate text-[15px] leading-relaxed normal-case max-w-2xl">
-            We don&rsquo;t dispatch subs — our own certified industrial mechanics perform
+            We don&rsquo;t dispatch subs. Our own certified industrial mechanics perform
             every project. Full documentation, no surprises, no change orders. Whether
             you&rsquo;re an OEM extending your reach, a municipality that needs a partner it
             can trust, or a firm looking for a mechanical subcontractor who won&rsquo;t make
-            a mess of the job — this is how we&rsquo;ve built every relationship we have.
+            a mess of the job, this is how we&rsquo;ve built every relationship we have.
           </p>
         </div>
       </section>

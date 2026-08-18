@@ -1,9 +1,6 @@
 import { useState } from 'react';
 
-// Get a free access key at https://web3forms.com — sign up with Admin@copperstatemachine.com
-// as the destination address, then paste the key it gives you below.
-// Until a real key is pasted in, submissions won't actually send anywhere.
-export const WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+export const WEB3FORMS_ACCESS_KEY = '860e5070-679b-4604-9836-904d379187c8';
 export const CAREERS_EMAIL = 'Admin@copperstatemachine.com';
 
 export default function ApplicationForm({ jobTitle }) {

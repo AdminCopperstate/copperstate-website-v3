@@ -1,10 +1,6 @@
 import { useState } from 'react';
 
-// This needs its OWN Web3Forms access key (separate from the careers/resume one),
-// created with Kyle.Flannery@copperstatemachine.com as the verified destination email.
-// Go to https://web3forms.com, sign up (or add a form) using his email, then paste
-// the key it gives you below. Until then, submissions won't actually send.
-export const PARTNERSHIPS_WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+export const PARTNERSHIPS_WEB3FORMS_ACCESS_KEY = 'fe90e24b-ccbd-493d-9546-21fb6779c07e';
 export const PARTNERSHIPS_EMAIL = 'Kyle.Flannery@copperstatemachine.com';
 
 const PARTNER_TYPES = [
