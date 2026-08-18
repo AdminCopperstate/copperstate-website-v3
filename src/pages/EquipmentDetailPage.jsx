@@ -49,12 +49,12 @@ export default function EquipmentDetailPage() {
                 from there.
               </p>
             </div>
-            <Link
-              to="/contact"
+            <a
+              href={`mailto:donny.oakes@copperstatemachine.com?subject=${encodeURIComponent(`Service Request: ${item.title}`)}`}
               className="inline-flex items-center px-6 py-3.5 bg-copper-grad text-ink text-[13px] font-bold tracking-[0.08em] uppercase hover:brightness-110 transition shrink-0"
             >
               Request Service
-            </Link>
+            </a>
           </div>
         </div>
       </section>
