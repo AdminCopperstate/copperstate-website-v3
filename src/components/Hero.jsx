@@ -38,12 +38,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/contact"
+            <a
+              href="mailto:donny.oakes@copperstatemachine.com?subject=Service%20Request"
               className="inline-flex items-center px-6 py-3.5 bg-copper-grad text-ink text-[13px] font-bold tracking-[0.08em] uppercase hover:brightness-110 transition"
             >
               Request Service
-            </Link>
+            </a>
             <Link
               to="/services"
               className="inline-flex items-center px-6 py-3.5 border border-ink-line text-cream text-[13px] font-bold tracking-[0.08em] uppercase hover:border-copper hover:text-copper-light transition"
