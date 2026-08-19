@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import HeroPhotoStrip from '../components/HeroPhotoStrip';
 import LocationTicker from '../components/LocationTicker';
 import ServiceMap from '../components/ServiceMap';
 import WhyUs from '../components/WhyUs';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <HeroPhotoStrip />
       <LocationTicker />
       <ServiceMap />
       <WhyUs />
