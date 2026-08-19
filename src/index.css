@@ -41,4 +41,13 @@
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+
+  .stat-fade-up {
+    opacity: 0;
+    animation: statFadeUp 0.7s ease-out forwards;
+  }
+  @keyframes statFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }

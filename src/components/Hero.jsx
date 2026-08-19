@@ -54,8 +54,12 @@ export default function Hero() {
         </div>
 
         <dl className="flex md:flex-col gap-6 md:gap-5 md:text-right shrink-0">
-          {STATS.map((stat) => (
-            <div key={stat.label}>
+          {STATS.map((stat, i) => (
+            <div
+              key={stat.label}
+              className="stat-fade-up"
+              style={{ animationDelay: `${300 + i * 150}ms` }}
+            >
               <dt className="sr-only">{stat.label}</dt>
               <dd className="text-copper-light font-display text-4xl md:text-5xl leading-none">
                 {stat.value}
