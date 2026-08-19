@@ -21,29 +21,37 @@ export default function TeamPhotoCarousel() {
   if (!count) return null;
 
   const photo = teamPhotos[index];
-  const isBroken = broken[index];
 
   return (
     <div>
       <h2 className="font-display text-cream text-2xl mb-5">Copperstate Machine and Industrial</h2>
 
       <div className="relative aspect-[16/9] bg-ink-soft border border-ink-line overflow-hidden">
-        {!isBroken && (
-          <img
-            src={photo.src}
-            alt={photo.caption}
-            onError={() => setBroken((b) => ({ ...b, [index]: true }))}
-            className="absolute inset-0 w-full h-full object-contain"
-          />
-        )}
-        {isBroken && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-            <IconGearSun className="text-ink-line" width={36} height={36} />
-            <span className="text-graphite text-[12px] tracking-[0.08em] uppercase">
-              Team Photo Coming Soon
-            </span>
-          </div>
-        )}
+        <div
+          className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {teamPhotos.map((p, i) => (
+            <div key={i} className="relative w-full h-full shrink-0">
+              {!broken[i] && (
+                <img
+                  src={p.src}
+                  alt={p.caption}
+                  onError={() => setBroken((b) => ({ ...b, [i]: true }))}
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              )}
+              {broken[i] && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                  <IconGearSun className="text-ink-line" width={36} height={36} />
+                  <span className="text-graphite text-[12px] tracking-[0.08em] uppercase">
+                    Team Photo Coming Soon
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent px-5 pt-10 pb-4 flex items-end justify-between">
           <span className="text-cream text-[13px] font-semibold normal-case">{photo.caption}</span>

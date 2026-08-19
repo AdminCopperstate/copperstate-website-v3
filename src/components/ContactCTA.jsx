@@ -7,7 +7,7 @@ export default function ContactCTA() {
         <h2 className="text-ink text-4xl md:text-5xl leading-[1.02] max-w-xl">
           Let&rsquo;s Talk
           <br />
-          <span className="text-ink/60">About Your</span>
+          <span className="text-copper-dark">About Your</span>
           <br />
           Equipment.
         </h2>
