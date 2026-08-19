@@ -51,6 +51,18 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  .underline-draw {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .underline-draw.play {
+    animation: underlineDraw 0.8s ease-out forwards;
+    animation-delay: 200ms;
+  }
+  @keyframes underlineDraw {
+    to { transform: scaleX(1); }
+  }
+
   .flow-arrow {
     stroke-dasharray: 6 7;
     animation: arrowFlow 1.4s linear infinite;

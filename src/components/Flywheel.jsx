@@ -37,11 +37,11 @@ function pointOn(angleDeg) {
 }
 
 export default function Flywheel() {
-  const diagramRef = useRef(null);
+  const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const node = diagramRef.current;
+    const node = sectionRef.current;
     if (!node) return;
 
     const observer = new IntersectionObserver(
@@ -51,14 +51,14 @@ export default function Flywheel() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="bg-cream py-20 md:py-28 border-t border-ink-line/10">
+    <section ref={sectionRef} className="bg-cream py-20 md:py-28 border-t border-ink-line/10">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-center gap-3 mb-5">
           <span className="w-8 h-px bg-copper" />
@@ -66,8 +66,11 @@ export default function Flywheel() {
             How We Work
           </span>
         </div>
-        <h2 className="text-ink text-4xl md:text-5xl leading-[1.02] max-w-2xl">
+        <h2 className="relative inline-block text-ink text-4xl md:text-5xl leading-[1.02]">
           Every Job Builds The Next
+          <span
+            className={`absolute left-0 -bottom-1.5 md:-bottom-2 h-[6px] md:h-[8px] w-full bg-copper underline-draw ${visible ? 'play' : ''}`}
+          />
         </h2>
         <p className="mt-5 text-slate text-[15px] leading-relaxed normal-case max-w-xl">
           At Copperstate, we&rsquo;re in the business of building lasting relationships. We take
@@ -79,7 +82,7 @@ export default function Flywheel() {
 
         <div className="mt-16 grid lg:grid-cols-[440px_1fr] gap-12 items-center">
           {/* Diagram */}
-          <div ref={diagramRef} className="relative mx-auto w-full max-w-[440px] aspect-square">
+          <div className="relative mx-auto w-full max-w-[440px] aspect-square">
             <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle
                 cx={CENTER}
