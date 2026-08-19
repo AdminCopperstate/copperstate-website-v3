@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+
 const STAGES = [
   {
     num: '01',
@@ -35,6 +37,26 @@ function pointOn(angleDeg) {
 }
 
 export default function Flywheel() {
+  const diagramRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = diagramRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-cream py-20 md:py-28 border-t border-ink-line/10">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -57,7 +79,7 @@ export default function Flywheel() {
 
         <div className="mt-16 grid lg:grid-cols-[440px_1fr] gap-12 items-center">
           {/* Diagram */}
-          <div className="relative mx-auto w-full max-w-[440px] aspect-square">
+          <div ref={diagramRef} className="relative mx-auto w-full max-w-[440px] aspect-square">
             <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle
                 cx={CENTER}
@@ -82,6 +104,7 @@ export default function Flywheel() {
                 return (
                   <path
                     key={i}
+                    className="flow-arrow"
                     d={`M ${start.x} ${start.y} A ${R} ${R} 0 ${large} 1 ${end.x} ${end.y}`}
                     fill="none"
                     stroke="#e17a1f"
@@ -91,30 +114,36 @@ export default function Flywheel() {
                   />
                 );
               })}
-              <circle cx={CENTER} cy={CENTER} r="72" fill="#17140f" />
-              <text
-                x={CENTER}
-                y={CENTER - 8}
-                textAnchor="middle"
-                className="fill-cream"
-                style={{ font: '700 14px "Anton", sans-serif', textTransform: 'uppercase', letterSpacing: '0.03em' }}
-              >
-                Trust &amp;
-              </text>
-              <text
-                x={CENTER}
-                y={CENTER + 14}
-                textAnchor="middle"
-                className="fill-copper-light"
-                style={{ font: '700 14px "Anton", sans-serif', textTransform: 'uppercase', letterSpacing: '0.03em' }}
-              >
-                Repeat
-              </text>
+              <g className={`hub-fade ${visible ? 'play' : ''}`} style={{ animationDelay: '500ms' }}>
+                <circle cx={CENTER} cy={CENTER} r="72" fill="#17140f" />
+                <text
+                  x={CENTER}
+                  y={CENTER - 8}
+                  textAnchor="middle"
+                  className="fill-cream"
+                  style={{ font: '700 14px "Anton", sans-serif', textTransform: 'uppercase', letterSpacing: '0.03em' }}
+                >
+                  Trust &amp;
+                </text>
+                <text
+                  x={CENTER}
+                  y={CENTER + 14}
+                  textAnchor="middle"
+                  className="fill-copper-light"
+                  style={{ font: '700 14px "Anton", sans-serif', textTransform: 'uppercase', letterSpacing: '0.03em' }}
+                >
+                  Repeat
+                </text>
+              </g>
 
               {angles.map((a, i) => {
                 const p = pointOn(a);
                 return (
-                  <g key={i}>
+                  <g
+                    key={i}
+                    className={`node-pop ${visible ? 'play' : ''}`}
+                    style={{ animationDelay: `${i * 150}ms` }}
+                  >
                     <circle cx={p.x} cy={p.y} r="26" fill="#f2ede3" stroke="#e17a1f" strokeWidth="2" />
                     <text
                       x={p.x}
