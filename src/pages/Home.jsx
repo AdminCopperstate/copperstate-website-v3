@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import LocationTicker from '../components/LocationTicker';
+import ServiceMap from '../components/ServiceMap';
 import WhyUs from '../components/WhyUs';
 import CoreValues from '../components/CoreValues';
 import Reviews from '../components/Reviews';
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <LocationTicker />
+      <ServiceMap />
       <WhyUs />
       <CoreValues />
       <Reviews />

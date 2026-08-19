@@ -43,6 +43,14 @@ export default function WhyUs() {
             client like a long-term partner, we&rsquo;ve built a company founded on trust.
             That&rsquo;s how we got here, and it&rsquo;s how we&rsquo;ll continue to grow.
           </p>
+
+          <div className="mt-8 bg-cream border border-ink-line p-3 max-w-sm">
+            <img
+              src="/clarifier-diagram.png"
+              alt="Clarifier center drive mechanism diagram"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div>
