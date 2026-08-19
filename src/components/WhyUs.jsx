@@ -44,10 +44,10 @@ export default function WhyUs() {
             That&rsquo;s how we got here, and it&rsquo;s how we&rsquo;ll continue to grow.
           </p>
 
-          <div className="mt-8 bg-cream border border-ink-line p-3 max-w-sm">
+          <div className="mt-8 border border-ink-line overflow-hidden">
             <img
-              src="/clarifier-diagram.png"
-              alt="Clarifier center drive mechanism diagram"
+              src="/team/group/full-team.jpg"
+              alt="The Copperstate team"
               className="w-full h-auto"
             />
           </div>
