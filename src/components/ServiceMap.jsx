@@ -8,13 +8,9 @@ export default function ServiceMap() {
             Nationwide Reach
           </span>
         </div>
-        <h2 className="text-cream text-4xl md:text-5xl leading-[1.02] max-w-2xl">
+        <h2 className="text-cream text-4xl md:text-5xl leading-[1.02]">
           Wherever The Plant Is, We Can Get There.
         </h2>
-        <p className="mt-5 text-graphite text-[15px] leading-relaxed normal-case max-w-2xl">
-          We&rsquo;ve mapped every water and wastewater facility in the country, so wherever
-          your equipment is, our crews already know how to get there fast.
-        </p>
 
         <div className="mt-12">
           <img
