@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { IconShield, IconHandshake, IconStar, IconMedal, IconUsers, IconCompass } from './Icons';
 
 const VALUES = [
@@ -34,6 +35,26 @@ const VALUES = [
 ];
 
 export default function CoreValues() {
+  const gridRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = gridRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-ink py-20 md:py-28 border-t border-ink-line">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -47,11 +68,18 @@ export default function CoreValues() {
           Core Values
         </h2>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ink-line/40 border border-ink-line/40">
-          {VALUES.map((value) => {
+        <div
+          ref={gridRef}
+          className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ink-line/40 border border-ink-line/40"
+        >
+          {VALUES.map((value, i) => {
             const Icon = value.icon;
             return (
-              <div key={value.title} className="bg-ink-soft p-7 flex flex-col">
+              <div
+                key={value.title}
+                className={`bg-ink-soft p-7 flex flex-col card-drop ${visible ? 'play' : ''}`}
+                style={{ animationDelay: `${i * 120}ms` }}
+              >
                 <Icon className="text-copper-light mb-5" />
                 <h3 className="font-display text-cream text-base leading-tight">{value.title}</h3>
                 <p className="mt-1.5 text-copper-light text-[12.5px] italic normal-case">
