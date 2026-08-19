@@ -51,6 +51,19 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  .nps-pop {
+    display: inline-block;
+    transform-origin: center;
+  }
+  .nps-pop.play {
+    animation: npsPop 0.5s ease-out;
+    animation-delay: 1400ms;
+  }
+  @keyframes npsPop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
   .card-drop {
     opacity: 0;
     transform: translateY(-32px);
