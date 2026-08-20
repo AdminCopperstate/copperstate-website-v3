@@ -36,6 +36,18 @@ export default function Equipment() {
               </span>
             </Link>
           ))}
+
+          <Link to="/gallery" className="relative min-h-[220px] overflow-hidden group">
+            <img
+              src="/gallery/photo-1.jpg"
+              alt="Copperstate crew on-site"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-ink/50 group-hover:bg-ink/30 transition-colors" />
+            <span className="absolute bottom-6 left-6 text-cream text-[11px] font-bold uppercase tracking-[0.08em]">
+              See More Work &rarr;
+            </span>
+          </Link>
         </div>
       </div>
     </section>
