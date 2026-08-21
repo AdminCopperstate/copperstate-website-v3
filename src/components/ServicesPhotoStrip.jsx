@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 
 const PHOTOS = [
   { src: '/services/crane-lift.jpg', alt: 'Crane lifting a rotor assembly into an oxidation ditch' },
-  { src: '/services/chain-drive.jpg', alt: 'Technician servicing a chain and sprocket drive' },
+  { src: '/services/chain-drive.jpg', alt: 'Crew assembling a center drive atop a clarifier tank' },
+  { src: '/services/tower-install.jpg', alt: 'Technician installing a drive tower inside an empty clarifier tank' },
 ];
 
 const AUTO_CYCLE_MS = 5000;
