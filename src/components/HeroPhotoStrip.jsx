@@ -1,6 +1,6 @@
 const PHOTOS = [
   { src: '/gallery/photo-1.jpg', alt: 'Clarifier drive removal and installation' },
-  { src: '/gallery/photo-11.jpg', alt: 'Field crew rigging equipment on-site' },
+  { src: '/gallery/photo-9.jpg', alt: 'Drive inspection and assessment' },
 ];
 
 export default function HeroPhotoStrip() {
