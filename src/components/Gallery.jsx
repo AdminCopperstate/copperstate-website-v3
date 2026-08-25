@@ -32,13 +32,12 @@ const PHOTOS = [
   { src: '/gallery/photo-11.jpg', caption: 'Rigging & Alignment', category: 'Blowers' },
   { src: '/gallery/photo-12.jpg', caption: 'Preventative Maintenance', category: 'Field Crew' },
   { src: '/gallery/photo-13.jpg', caption: 'Mixer Seal Replacement', category: 'Mixers' },
-  { src: '/gallery/photo-14.jpg', caption: 'Baffle Wall Repair', category: 'Baffles' },
+  { src: '/gallery/photo-14.jpg', caption: 'Sluice Gate Installation', category: 'Baffles' },
   { src: '/gallery/photo-15.jpg', caption: 'New Equipment Supply', category: 'Blowers' },
   { src: '/gallery/photo-16.jpg', caption: 'Sandblast & Recoat', category: 'Fabrication' },
   { src: '/gallery/photo-17.jpg', caption: 'Belt-to-Direct-Drive Conversion', category: 'Blowers' },
   { src: '/gallery/photo-18.jpg', caption: 'Queen Creek Fabrication Shop', category: 'Fabrication' },
   { src: '/gallery/photo-19.jpg', caption: 'Emergency Call-Out Response', category: 'Field Crew' },
-  { src: '/gallery/photo-20.jpg', caption: 'DAF Skimmer Service', category: 'DAFs' },
 ];
 
 function GalleryTile({ src, caption }) {
