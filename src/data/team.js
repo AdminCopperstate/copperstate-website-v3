@@ -14,14 +14,14 @@ const team = [
     name: 'Ashton Oakes',
     title: 'COO | Operations Manager',
     photo: '/team/ashton-oakes.jpg',
-    email: 'Ashton.oakes@copperstatemachine.com',
+    email: 'ashton.oakes@copperstatemachine.com',
     bio: 'Owner and operations manager, keeping every job on schedule and every crew supplied with what they need to get it done.',
   },
   {
     name: 'Nichole Smith',
     title: 'Project Manager',
     photo: '/team/nichole-smith.jpg',
-    email: 'Nichole.Smith@copperstatemachine.com',
+    email: 'nichole.smith@copperstatemachine.com',
     bio: 'Plans, coordinates, and schedules every job \u2014 keeping projects on track from mobilization to close-out.',
   },
   {
@@ -49,7 +49,7 @@ const team = [
     name: 'Kyle Flannery',
     title: 'Director of Strategic Partnerships',
     photo: '/team/kyle-flannery.jpg',
-    email: 'Kyle.Flannery@copperstatemachine.com',
+    email: 'kyle.flannery@copperstatemachine.com',
     bio: 'Builds and manages relationships with OEMs, municipalities, and partners nationwide.',
   },
   {
