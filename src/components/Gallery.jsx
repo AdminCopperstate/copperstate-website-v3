@@ -38,7 +38,7 @@ const PHOTOS = [
   { src: '/gallery/photo-17.jpg', caption: 'Belt-to-Direct-Drive Conversion', category: 'Blowers' },
   { src: '/gallery/photo-18.jpg', caption: 'Queen Creek Fabrication Shop', category: 'Fabrication' },
   { src: '/gallery/photo-19.jpg', caption: 'Emergency Call-Out Response', category: 'Field Crew' },
-  { src: '/gallery/photo-20.jpg', caption: 'Clarifier Column Alignment', category: 'Clarifiers' },
+  { src: '/gallery/photo-20.jpg', caption: '', category: '' },
 ];
 
 function GalleryTile({ src, caption }) {
