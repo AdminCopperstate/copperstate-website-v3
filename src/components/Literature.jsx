@@ -19,7 +19,7 @@ const FLYERS = [
 export default function Literature() {
   return (
     <div>
-      <h2 className="font-display text-cream text-2xl">Literature</h2>
+      <h2 className="font-display text-cream text-2xl">Company Flyers</h2>
       <p className="mt-2 text-graphite text-[14px] leading-relaxed normal-case max-w-lg">
         Product line cards and capability sheets &mdash; opens as a PDF in a new tab.
       </p>
