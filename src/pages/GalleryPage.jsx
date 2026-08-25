@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import Gallery from '../components/Gallery';
-import ProjectsGallery from '../components/ProjectsGallery';
 import TeamGrid from '../components/TeamGrid';
 import TeamPhotoCarousel from '../components/TeamPhotoCarousel';
 import ContactCTA from '../components/ContactCTA';
 
 const TABS = [
   { key: 'gallery', label: 'Photo Gallery' },
-  { key: 'projects', label: 'Featured Projects' },
   { key: 'team', label: 'Meet The Team' },
 ];
 
@@ -50,7 +48,6 @@ export default function GalleryPage() {
 
           <div className="mt-12">
             {activeTab === 'gallery' && <Gallery />}
-            {activeTab === 'projects' && <ProjectsGallery />}
             {activeTab === 'team' && (
               <div className="space-y-14">
                 <TeamGrid />
