@@ -41,7 +41,7 @@ export default function TeamGrid() {
             {member.email && (
               <a
                 href={`mailto:${member.email}`}
-                className="mt-3 inline-block text-copper-light text-[12px] font-semibold normal-case hover:text-cream transition"
+                className="mt-3 block text-center text-copper-light text-[12px] font-semibold normal-case break-words hover:text-cream transition"
               >
                 {member.email}
               </a>
