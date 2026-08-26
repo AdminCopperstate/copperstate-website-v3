@@ -3,6 +3,7 @@ import HeroPhotoStrip from '../components/HeroPhotoStrip';
 import LocationTicker from '../components/LocationTicker';
 import ServiceMap from '../components/ServiceMap';
 import WhyUs from '../components/WhyUs';
+import SalesTeamPhoto from '../components/SalesTeamPhoto';
 import CoreValues from '../components/CoreValues';
 import Reviews from '../components/Reviews';
 import NpsScore from '../components/NpsScore';
@@ -16,6 +17,7 @@ export default function Home() {
       <LocationTicker />
       <ServiceMap />
       <WhyUs />
+      <SalesTeamPhoto />
       <CoreValues />
       <Reviews />
       <NpsScore />

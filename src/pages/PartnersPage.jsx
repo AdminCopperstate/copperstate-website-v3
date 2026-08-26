@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { IconCase, IconShield, IconTriangle, IconBuilding, IconUser } from '../components/Icons';
 import PartnershipForm from '../components/PartnershipForm';
+import SalesTeamPhoto from '../components/SalesTeamPhoto';
 
 const PARTNER_TYPES = [
   {
@@ -74,6 +75,8 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
+
+      <SalesTeamPhoto />
 
       {/* Why it matters */}
       <section className="bg-cream py-20 md:py-24">
