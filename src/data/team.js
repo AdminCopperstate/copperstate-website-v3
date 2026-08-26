@@ -54,7 +54,7 @@ const team = [
   },
   {
     name: 'Johnathan Campbell',
-    title: 'Sales Manager',
+    title: 'Sales',
     photo: '/team/johnathan-campbell.jpg',
     email: 'Jonathan.Campbell@copperstatemachine.com',
     bio: 'Works directly with clients to scope projects and build lasting relationships from first call to final sign-off.',
