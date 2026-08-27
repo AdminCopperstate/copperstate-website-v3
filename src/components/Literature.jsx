@@ -4,6 +4,26 @@ const FLYERS = [
     file: '/flyers/belt-drive-to-direct-drive.pdf',
     cover: '/flyers/belt-drive-to-direct-drive-cover.jpg',
   },
+  {
+    title: 'Blower',
+    file: '/flyers/blower.pdf',
+    cover: '/flyers/blower-cover.jpg',
+  },
+  {
+    title: 'Clarifier',
+    file: '/flyers/clarifier.pdf',
+    cover: '/flyers/clarifier-cover.jpg',
+  },
+  {
+    title: 'Hydrotech Disc Filter',
+    file: '/flyers/hydrotech-disc-filter.pdf',
+    cover: '/flyers/hydrotech-disc-filter-cover.jpg',
+  },
+  {
+    title: 'Oxidation Ditch',
+    file: '/flyers/oxidation-ditch.pdf',
+    cover: '/flyers/oxidation-ditch-cover.jpg',
+  },
 ];
 
 export default function Literature() {
