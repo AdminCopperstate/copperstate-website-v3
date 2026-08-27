@@ -4,16 +4,6 @@ const FLYERS = [
     file: '/flyers/belt-drive-to-direct-drive.pdf',
     cover: '/flyers/belt-drive-to-direct-drive-cover.jpg',
   },
-  {
-    title: 'Clarifier Line Card',
-    file: '/flyers/clarifier.pdf',
-    cover: '/flyers/clarifier-cover.jpg',
-  },
-  {
-    title: 'Hydrotech Disc Filter',
-    file: '/flyers/hydrotech-disc-filter.pdf',
-    cover: '/flyers/hydrotech-disc-filter-cover.jpg',
-  },
 ];
 
 export default function Literature() {
