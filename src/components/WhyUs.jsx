@@ -1,3 +1,5 @@
+import StoryCarousel from './StoryCarousel';
+
 const POINTS = [
   {
     title: 'Specialists, Not Generalists',
@@ -44,12 +46,8 @@ export default function WhyUs() {
             That&rsquo;s how we got here, and it&rsquo;s how we&rsquo;ll continue to grow.
           </p>
 
-          <div className="mt-8 border border-ink-line overflow-hidden">
-            <img
-              src="/team/group/full-team.jpg"
-              alt="The Copperstate team"
-              className="w-full h-auto"
-            />
+          <div className="mt-8">
+            <StoryCarousel />
           </div>
         </div>
 
